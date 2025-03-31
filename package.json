@@ -10,6 +10,9 @@
         "type": "git",
         "url": "git+https://github.com/DiguinhoLNS/test-ui.git"
     },
+    "publishConfig": {
+        "provenance": true
+    },
     "license": "ISC",
     "author": "DiguinhoLNS",
     "type": "module",
