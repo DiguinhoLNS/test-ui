@@ -10,9 +10,6 @@
         "type": "git",
         "url": "git+https://github.com/DiguinhoLNS/test-ui.git"
     },
-    "publishConfig": {
-        "registry": "https://npm.pkg.github.com/"
-    },
     "license": "ISC",
     "author": "DiguinhoLNS",
     "type": "module",
