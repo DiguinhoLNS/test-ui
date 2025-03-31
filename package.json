@@ -1,0 +1,42 @@
+{
+    "name": "@diguinho_lns/test-ui",
+    "version": "1.0.12",
+    "description": "Simple UI lib test for a web application",
+    "homepage": "https://github.com/DiguinhoLNS/test-ui#readme",
+    "bugs": {
+        "url": "https://github.com/DiguinhoLNS/test-ui/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/DiguinhoLNS/test-ui.git"
+    },
+    "license": "ISC",
+    "author": "DiguinhoLNS",
+    "type": "module",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "default": "./dist/index.js"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "deploy": "npm run build && npm publish --access public",
+        "deploy-patch": "npm version patch && npm run deploy"
+    },
+    "peerDependencies": {
+        "react": "^19.1.0",
+        "react-dom": "^19.1.0"
+    },
+    "devDependencies": {
+        "@types/node": "^22.13.14",
+        "@types/react": "^19.0.12",
+        "@types/react-dom": "^19.0.4",
+        "typescript": "^5.0.2"
+    }
+}
