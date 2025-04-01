@@ -5,7 +5,7 @@ export default {
         '@babel/preset-typescript'
     ],
     plugins: [
-        '@babel/plugin-transform-modules-commonjs' // Garante que o código seja convertido para CommonJS
+        '@babel/plugin-transform-modules-commonjs'
     ]
 }
   
