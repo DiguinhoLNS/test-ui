@@ -13,7 +13,7 @@ export default {
         },
     },
     transformIgnorePatterns: [
-        '/node_modules/(?!(your-package-name|another-package-name)/)',
+        '/node_modules/',
     ],
     modulePathIgnorePatterns: ['<rootDir>/dist/', '<rootDir>/types.d.ts'],
 };  
