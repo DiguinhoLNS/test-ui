@@ -2,7 +2,7 @@
     "compilerOptions": {
         "strict": true,
         "target": "ES6",
-        "module": "ESNext",
+        "module": "CommonJS",
         "moduleResolution": "node",
         "forceConsistentCasingInFileNames": true,
         "jsx": "react-jsx",

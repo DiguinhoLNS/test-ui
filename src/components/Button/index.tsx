@@ -1,6 +1,7 @@
 import React from 'react'
-import { ButtonProps } from './types'
+import type { ButtonProps } from './types'
 
+export { ButtonProps }
 export const Button: React.FC <ButtonProps> = ({
     text,
     onClick,
@@ -10,7 +11,7 @@ export const Button: React.FC <ButtonProps> = ({
 
         <button
             onClick={onClick}
-        >TESTE BUTTON</button>
+        >{text}</button>
 
     )
 
