@@ -22,8 +22,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run tests with experimental-vm-modules
-        run: node --experimental-vm-modules node_modules/.bin/jest --coverage
+      - name: Run tests
+        run: npm test -- --coverage
 
   publish:
     needs: test
