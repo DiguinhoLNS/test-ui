@@ -17,9 +17,7 @@
     "exclude": [
         "node_modules",
         "dist",
-        "**/*.spec.tsx",
-        "**/*.test.tsx",
-        "test",
-        "__tests__"
+        "**/*test*/**",
+        "**/*test*.*"
     ]
   }
