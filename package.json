@@ -24,6 +24,9 @@
   "homepage": "https://github.com/DiguinhoLNS/test-ui#readme",
   "description": "Simple UI lib test for a web application",
   "devDependencies": {
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-react": "^7.26.3",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@types/jest": "^29.5.14",
@@ -31,6 +34,7 @@
     "@types/react-dom": "^19.0.4",
     "babel-jest": "^29.7.0",
     "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "ts-jest": "^29.3.1",
     "typescript": "^5.8.2"
   },
