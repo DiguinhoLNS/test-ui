@@ -1,8 +1,11 @@
 import React from 'react'
-import type { ButtonProps } from './types'
 
-export type { ButtonProps }
-export const Button: React.FC <ButtonProps> = ({
+export interface ButtonProps {
+    text: string
+    onClick?: () => void
+}
+
+const Button: React.FC <ButtonProps> = ({
     text,
     onClick,
 }) => {
@@ -16,3 +19,5 @@ export const Button: React.FC <ButtonProps> = ({
     )
 
 }
+
+export default Button
