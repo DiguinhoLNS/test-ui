@@ -1,19 +1,10 @@
-export default {
-    preset: 'ts-jest',
-    testEnvironment: 'jsdom',
+/** @type {import('ts-jest').JestConfigWithTsJest} **/
+module.exports = {
+    testEnvironment: "jsdom",
     transform: {
-      '^.+\\.(ts|tsx|js|jsx)$': 'babel-jest',
+      "^.+\\.tsx?$": ["ts-jest", {}],
     },
-    moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-    setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-    extensionsToTreatAsEsm: ['.ts', '.tsx'],
-    globals: {
-        'ts-jest': {
-          useBabelrc: true,
-        },
-    },
-    transformIgnorePatterns: [
-        '/node_modules/',
-    ],
-    modulePathIgnorePatterns: ['<rootDir>/dist/', '<rootDir>/types.d.ts'],
-};  
+    moduleFileExtensions: ["ts", "tsx", "js", "jsx"],
+    testMatch: ["**/__tests__/**/*.(test|spec).(ts|tsx)"],
+    setupFilesAfterEnv: ["@testing-library/jest-dom/extend-expect"]
+  };

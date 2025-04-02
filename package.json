@@ -1,61 +1,41 @@
 {
-    "name": "@diguinho_lns/test-ui",
-    "version": "1.0.17",
-    "description": "Simple UI lib test for a web application",
-    "homepage": "https://github.com/DiguinhoLNS/test-ui#readme",
-    "bugs": {
-        "url": "https://github.com/DiguinhoLNS/test-ui/issues"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/DiguinhoLNS/test-ui.git"
-    },
-    "publishConfig": {
-        "provenance": true
-    },
-    "license": "ISC",
-    "author": "DiguinhoLNS",
-    "type": "module",
-    "main": "./dist/index.js",
-    "types": "./dist/index.d.ts",
-    "exports": {
-        ".": {
-            "types": "./dist/index.d.ts",
-            "import": "./dist/index.js"
-        }
-    },
-    "files": [
-        "dist"
-    ],
-    "scripts": {
-        "test": "jest",
-        "test:watch": "jest --watch",
-        "build": "tsc",
-        "build:watch": "tsc --watch",
-        "deploy": "npm run build && npm publish --access public"
-    },
-    "peerDependencies": {
-        "react": "^19.1.0",
-        "react-dom": "^19.1.0"
-    },
-    "devDependencies": {
-        "@babel/core": "^7.26.10",
-        "@babel/plugin-transform-modules-commonjs": "^7.26.3",
-        "@babel/preset-env": "^7.26.9",
-        "@babel/preset-react": "^7.26.3",
-        "@babel/preset-typescript": "^7.27.0",
-        "@testing-library/dom": "^10.4.0",
-        "@testing-library/jest-dom": "^6.6.3",
-        "@testing-library/react": "^16.2.0",
-        "@testing-library/user-event": "^14.6.1",
-        "@types/jest": "^29.5.14",
-        "@types/node": "^22.13.14",
-        "@types/react": "^19.0.12",
-        "@types/react-dom": "^19.0.4",
-        "babel-jest": "^29.7.0",
-        "jest": "^29.7.0",
-        "jest-environment-jsdom": "^29.7.0",
-        "ts-jest": "^29.3.1",
-        "typescript": "^5.0.2"
-    }
+  "name": "@diguinho_lns/test-ui",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "deploy": "npm run build && npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiguinhoLNS/test-ui.git"
+  },
+  "keywords": [],
+  "author": "DiguinhoLNS",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/DiguinhoLNS/test-ui/issues"
+  },
+  "homepage": "https://github.com/DiguinhoLNS/test-ui#readme",
+  "description": "Simple UI lib test for a web application",
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@types/jest": "^29.5.14",
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.3.1",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import type { ButtonProps } from './types'
 
-export { ButtonProps }
+export type { ButtonProps }
 export const Button: React.FC <ButtonProps> = ({
     text,
     onClick,
