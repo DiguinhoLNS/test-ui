@@ -38,28 +38,28 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Obter a última tag existente
+      - name: Get the latest existing tag
         id: last_tag
         run: echo "LAST_TAG=$(git tag --sort=-v:refname | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' | head -n 1)" >> $GITHUB_ENV
 
-      - name: Comparar versão
+      - name: Compare version
         id: compare_versions
         run: |
           CURRENT_TAG=${GITHUB_REF#refs/tags/}
-          LAST_TAG=${LAST_TAG:-0.0.0}  # Se não houver tag anterior, assume 0.0.0
+          LAST_TAG=${LAST_TAG:-0.0.0}  # If no previous tag, assume 0.0.0
 
-          echo "Última tag: $LAST_TAG"
-          echo "Nova tag: $CURRENT_TAG"
+          echo "Last tag: $LAST_TAG"
+          echo "New tag: $CURRENT_TAG"
 
-          # Função para comparar versões
+          # Function to compare versions
           version_gt() {
             printf '%s\n%s' "$1" "$2" | sort -V | tail -n 1
           }
 
           if [ "$(version_gt "$CURRENT_TAG" "$LAST_TAG")" = "$CURRENT_TAG" ]; then
-            echo "A nova tag é maior. Continuando..."
+            echo "The new tag is greater. Proceeding..."
           else
-            echo "Erro: A nova tag ($CURRENT_TAG) não é maior que a última ($LAST_TAG)."
+            echo "Error: The new tag ($CURRENT_TAG) is not greater than the last one ($LAST_TAG)."
             exit 1
           fi
 

@@ -1,4 +1,5 @@
 {
     "presets": ["@babel/preset-env", "@babel/preset-react", "@babel/preset-typescript"],
-    "sourceType": "module"
+    "sourceType": "module",
+    "ignore": ["**/*.d.ts"]
 }

@@ -6,9 +6,11 @@
       "declaration": true,
       "declarationDir": "./dist",
       "outDir": "./dist",
+      "rootDir": "./src",
       "strict": true,
       "jsx": "react",
       "moduleResolution": "node",
+      "removeComments": false,
       "esModuleInterop": true,
       "skipLibCheck": true,
       "forceConsistentCasingInFileNames": true
