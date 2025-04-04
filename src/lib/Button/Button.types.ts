@@ -1,3 +1,6 @@
+/**
+ * Button component props.
+ */
 export interface ButtonProps {
     /**
     * Text displayed inside the button.
