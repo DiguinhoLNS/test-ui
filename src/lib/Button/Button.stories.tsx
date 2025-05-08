@@ -13,6 +13,9 @@ const meta: Meta<typeof Button> = {
             options: ['danger', 'success', 'warning', 'info', undefined],
         },
     },
+    args: {
+        status: undefined,
+    },
 };
 
 export default meta;

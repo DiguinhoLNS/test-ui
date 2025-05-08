@@ -11,8 +11,7 @@
     "build:watch": "tsc --watch",
     "deploy": "npm run build && npm publish --access public",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_5a830a591264480"
+    "build-storybook": "storybook build"
   },
   "repository": {
     "type": "git",

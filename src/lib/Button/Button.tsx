@@ -32,6 +32,7 @@ export const Button: React.FC <ButtonProps> = ({
                 border: 'none',
                 borderRadius: '4px',
                 padding: '10px 20px',
+                cursor: 'pointer',
                 ...determineButtonStyle()
             }}
             onClick={onClick}
