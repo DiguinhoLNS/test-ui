@@ -1,4 +1,4 @@
-name: Chromatic Deployment
+name: Chromatic Pipeline
 
 on:
   push:
@@ -8,37 +8,30 @@ on:
       - '[0-9]+.[0-9]+.[0-9]+'
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run tests
-        run: npm test -- --coverage
+  call-tests:
+    name: Run Tests
+    uses: ./.github/workflows/main.yml
 
   chromatic:
-    needs: test
+    name: Run Chromatic
+    needs: call-tests
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 18
 
       - name: Install dependencies
         run: npm install
 
-      - name: Publish to Chromatic
-        run: npx chromatic --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+      - name: Run Chromatic
+        uses: chromaui/action@latest
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          onlyChanged: true
+          exitOnceUploaded: true
