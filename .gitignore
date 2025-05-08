@@ -17,3 +17,5 @@ yarn-debug.log*
 yarn-error.log*
 
 jest-global-setup.js
+*storybook.log
+/storybook-static
