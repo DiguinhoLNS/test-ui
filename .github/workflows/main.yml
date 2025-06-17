@@ -94,7 +94,7 @@ jobs:
         run: npm config set registry https://npm.pkg.github.com/
 
       - name: Publish to GitHub Packages
-        run: npm publish --provenance
+        run: npm publish
 
   publish-chromatic:
     needs: [publish-npm, publish-github]
