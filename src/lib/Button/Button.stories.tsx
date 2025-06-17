@@ -61,10 +61,3 @@ export const StatusInfo: Story = {
         status: 'info',
     },
 };
-
-export const StatusDefault: Story = {
-    args: {
-        text: 'Padrão',
-        status: undefined,
-    },
-};
