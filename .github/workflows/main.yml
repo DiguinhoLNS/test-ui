@@ -52,6 +52,11 @@ jobs:
       - name: Build package
         run: npm run build
 
+      - name: Debug NPM_AUTH_TOKEN
+        run: echo "Token is set"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
       - name: Publish to npm
         run: npm publish --provenance --access public
         env:
@@ -64,6 +69,7 @@ jobs:
     permissions:
       contents: read
       packages: write
+      id-token: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
